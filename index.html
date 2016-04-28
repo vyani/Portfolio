@@ -1,0 +1,169 @@
+<!DOCTYPE>
+<html>
+
+<head>
+   
+<!-----CSS------->    
+<link rel=stylesheet type="text/css" href="css/port.css">  
+
+<!-----Google Font------->   
+<link href='http://fonts.googleapis.com/css?family=Work+Sans:400,300,200,700' rel='stylesheet' type='text/css'>  
+
+<!-----Font Awesome------->   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> 
+    
+    
+<script>
+    'use strict';
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+        throw new TypeError('Cannot call a class as a function');
+    }
+}
+window.onload = function () {
+    var ph = new ParallaxHero('.hero');
+};
+var ParallaxHero = function () {
+    function ParallaxHero(q) {
+        _classCallCheck(this, ParallaxHero);
+        this.element = q;
+        this.bindScroll();
+        this.sampleScroll();
+    }
+    ParallaxHero.prototype.bindScroll = function bindScroll() {
+        var _this = this;
+        $(window).on('scroll', function () {
+            var scrolled = $(window).scrollTop();
+            $(_this.element + ' h1').css({
+                'top': scrolled * 0.7 + 'px',
+                'opacity': '' + (1 - scrolled / $(_this.element).outerHeight() * 1.8)
+            });
+            $(_this.element).css({
+                'background-position': '50% calc(50% + ' + scrolled * 0.2 + 'px)',
+                'background-size': 200 + scrolled * 50 / $(_this.element).outerHeight() + '%'
+            });
+            $(_this.element + ' .optional-rainbow').css('opacity', '' + (0.4 + scrolled / $(_this.element).outerHeight()));
+        });
+        $('.selectable').on('click', function (e) {
+            $('.selectable').toggleClass('on');
+            $('.hero').toggleClass('fadeout');
+        });
+    };
+    ParallaxHero.prototype.sampleScroll = function sampleScroll() {
+        setTimeout(function () {
+            $.scrollTo(500, 2000);
+        }, 500);
+    };
+    return ParallaxHero;
+}();
+    </script>    
+    
+    
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <section class="hero vertical-center">
+        <div class="text-center">
+        <h1>Vyani Manao</h1>
+        </div>
+        <div class="optional-rainbow"></div>
+    </section>
+  <section class="content">
+    <div class="#">
+      <article>
+        <div class="col-sm-6 article-left">
+          <img src="img/IMG_0246_Fotor.png" alt="photo" class="article-image" style="max-width:100%;">
+        </div>
+          
+        <div class="col-sm-6 article-right">
+           <h2 style= "text-align:center; margin-top: 5%">Vyani</h2>
+            <p><i class="fa fa-code" aria-hidden="true"></i>   Coding Mum Workshop: HTML5, CSS, JavaScript</p>
+            <p><i class="fa fa-code" aria-hidden="true"></i>   Actively learn in FreeCodeCamp (see portfolio)</p>
+            <p><i class="fa fa-envelope-o" aria-hidden="true"></i>   vyanimanao@gmail.com</p>
+            <p><i class="fa fa-mobile" aria-hidden="true"></i>   08119892708</p>
+            <p><i class="fa fa-home" aria-hidden="true"></i>   Kebagusan, Jakarta Selatan</p>
+          <div class="control row">
+            <div class="col-xs-8"></div>
+            <div class="col-xs-3">
+              
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</div> <!--wrapper-->
+    
+<div class="container">
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>About Me</h3>
+         <span>Me in a nut-shell</span>
+         <p>Early (and life-long) learner about front-end development. I love writing my own code from the scratch.</p>
+          <p>You can find me either preparing small fashion business with friends or learning handstand in yoga class.</p>
+          <p>Oh, I'm also business oriented person. Employer, you don't have to worry.</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-left">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Education</h3>
+         <span>Behavioral science fascinates me</span>
+         <p>Universitas Indonesia
+          <br>
+            Psychology Faculty
+            <br>
+            Bachelor Degree
+            <br>
+            (2008-2012)</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-right">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Experience</h3>
+         <span>Tackle challenges in fast-paced consumer goods company. See my <a href="https://id.linkedin.com/in/maria-octavyani-manao-37b39652">LinkedIn</a> for details</span>
+         <p>PT Nestle Indonesia
+              <br>
+              Key Account Executive
+              (2012-2013)
+              <br>
+              Key Account Manager
+              (2013-2014)</p>
+      </div>
+   </div>
+
+   <div class="timeline-block timeline-block-left">
+      <div class="marker"></div>
+      <div class="timeline-content">
+         <h3>Portfolio</h3>
+         <span>Some works in coding world</span>
+            <p><a  href="https://github.com/vyani/kiddy_shop" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a></p>
+            <p class="wp1">Convinient kids clothing online shop with Pinterest touch</p> 
+          
+            <a href="https://github.com/vyani/framework_project" target="_blank"><i class="fa fa-github fa-4x" aria-hidden="true">  </i></a> 
+            <p class="wp1">One of Coding Mum assignment for applying framework in website</p>
+       
+            <a href="https://www.freecodecamp.com/vyani" target="_blank"><i class="fa fa-fire fa-4x" aria-hidden="true"></i></a> 
+            <p class="wp1">Learning in progress in FreeCodeCamp</p>
+          
+            <a href="http://vastrabatik.com/" target="_blank"><i class="fa fa-shopping-bag fa-4x" aria-hidden="true"></i></a>
+            <p class="wp1">Batik tulis catalogue, including shopping cart</p>
+        
+            <a href="http://codepen.io/Vyani/pen/yOLXqK" target="_blank"><i class="fa fa-codepen fa-4x" aria-hidden="true"></i></a>
+            <p class="wp1">Tribute page for Jamie Oliver using HTML5</p>  
+      </div>
+   </div>
+
+
+</div>
+
+</body>
+</html>
